@@ -1,0 +1,9 @@
+<?php foreach ($block->getMovies() as $movie): ?>
+    <h2><?php echo $movie->getName(); ?></h2>
+    <p>Director: <?php echo $movie->getDirector()->getName(); ?></p>
+    <p>Actors:
+        <?php foreach ($movie->getActors() as $actor): ?>
+            <?php echo $actor->getName(); ?>
+        <?php endforeach; ?>
+    </p>
+<?php endforeach; ?>
